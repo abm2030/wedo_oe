@@ -13,4 +13,14 @@ public class Money {
     private double roundToAllowedFractionSize(double amount) {
         return Math.round(amount*Math.pow(10, this.ALLOWED_FRACTION_SIZE))/Math.pow(10, this.ALLOWED_FRACTION_SIZE);
     }
+
+    public boolean isLessThan(Money anotherMoney) {
+        return this.AMOUNT < anotherMoney.AMOUNT;
+    }
+    public boolean isEqualTo(Money anotherMoney) {
+        return this.AMOUNT == anotherMoney.AMOUNT;
+    }
+    public boolean isMoreThan(Money anotherMoney) {
+        return this.AMOUNT > anotherMoney.AMOUNT;
+    }
 }
