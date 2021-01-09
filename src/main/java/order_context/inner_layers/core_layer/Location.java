@@ -9,7 +9,7 @@ public class Location {
         LONGTITUDE = longtitude;
     }
 
-    public boolean isSameAs(Location anotherLocation) {
-        return this.LAITUDE == anotherLocation.LAITUDE && this.LONGTITUDE == anotherLocation.LONGTITUDE;
+    public boolean isSameAs(Location another) {
+        return this.LAITUDE == another.LAITUDE && this.LONGTITUDE == another.LONGTITUDE;
     }
 }
