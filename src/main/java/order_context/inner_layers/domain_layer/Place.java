@@ -20,4 +20,12 @@ public class Place {
     public boolean isSameAs(Place another) {
         return this.placeID == another.placeID;
     }
+
+    public String getPlaceID() {
+        return placeID;
+    }
+
+    public List<Area> getAreas() {
+        return areas;
+    }
 }

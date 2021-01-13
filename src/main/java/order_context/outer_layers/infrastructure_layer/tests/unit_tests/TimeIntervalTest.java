@@ -30,4 +30,14 @@ public class TimeIntervalTest {
         ));
 
     }
+    @Test
+    void isWithinTest() {
+        TimeInterval timeInterval = new TimeInterval(new Time(), new Time());
+        Time time = new Time();
+        assertEquals(true, timeInterval.isWithin(time));
+        TimeInterval timeInterval1 = new TimeInterval(new Time(), new Time());
+        TimeInterval timeInterval2 = new TimeInterval(new Time(), new Time());
+        assertEquals(true, timeInterval1.isWithin(timeInterval2));
+
+    }
 }

@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Area {
+    public String getAreaID() {
+        return areaID;
+    }
+
     private String areaID;
     private Name name;
     private List<Location> borders;

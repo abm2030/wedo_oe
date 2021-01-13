@@ -10,8 +10,17 @@ public class TimeInterval {
     }
 
     public boolean isSameAs(TimeInterval another) {
-        if (this.BEGIN.isSameAs(another.BEGIN) && this.END.isSameAs(another.END))
+        if (this.BEGIN.isEqualTo(another.BEGIN) && this.END.isEqualTo(another.END))
                 return true;
         return false;
+    }
+
+    public boolean isWithin(TimeInterval another) {
+        if (this.BEGIN.isLessThan(another.BEGIN) || this.END.isMoreThan(another.END)) return false;
+        return true;
+    }
+    public boolean isWithin(Time time) {
+        if (time.isLessThan(this.BEGIN) | time.isMoreThan(this.END)) return false;
+        return true;
     }
 }

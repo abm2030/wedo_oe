@@ -24,7 +24,7 @@ public class Time {
 
     }
 
-    public boolean isOlderThan(Time another) {
+    public boolean isLessThan(Time another) {
         if (this.YEAR < another.YEAR) return true;
         else if (this.YEAR > another.YEAR) return false;
         if (this.MONTH < another.MONTH) return true;
@@ -40,7 +40,7 @@ public class Time {
 
         return false; // it shouldn't reach here but if it did high probability to be false than true
     }
-    public boolean isSameAs(Time another) {
+    public boolean isEqualTo(Time another) {
         return this.YEAR == another.YEAR &&
                 this.MONTH == another.MONTH &&
                 this.DAY == another.DAY &&
@@ -48,7 +48,7 @@ public class Time {
                 this.MINUTE == another.MINUTE &&
                 this.SECOND == another.SECOND;
     }
-    public boolean isNewerThan(Time another) {
+    public boolean isMoreThan(Time another) {
         if (this.YEAR < another.YEAR) return false;
         else if (this.YEAR > another.YEAR) return true;
         if (this.MONTH < another.MONTH) return false;
